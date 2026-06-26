@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil Interativo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <header>
+        <h1>Olá, eu sou o...</h1>
+        <p>Jovem Aprendiz • Futuro Confeiteiro • Apaixonado por Evolução</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2>👤 Sobre Mim</h2>
+            <p class="intro-text">Tenho 17 anos e divido minha rotina de Jovem Aprendiz com a busca constante por aperfeiçoamento. Sou movido por disciplina e criatividade, focado em absorver o máximo de conhecimento em tudo o que me proponho a fazer.</p>
+            
+            <div class="about-grid">
+                <div class="info-box">🏐 Vôlei nas pistas</div>
+                <div class="info-box">💪 Musculação diária</div>
+                <div class="info-box">🎵 Gosto Musical Eclético</div>
+                <div class="info-box">👨‍🍳 Futuro Chef Confeiteiro</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🎯 Minhas Habilidades</h2>
+            <p class="intro-text" style="margin-bottom: 1.5rem;">Clique nas barras abaixo para revelar o quanto me dedico a cada área:</p>
+            
+            <div class="skill-container">
+                <div class="skill-bar" onclick="moveSkill('confeitaria', 95)">
+                    <div id="confeitaria" class="skill-progress">Produção de Doces & Confeitaria</div>
+                </div>
+                
+                <div class="skill-bar" onclick="moveSkill('treino', 88)">
+                    <div id="treino" class="skill-progress">Musculação & Foco</div>
+                </div>
+
+                <div class="skill-bar" onclick="moveSkill('trabalho', 85)">
+                    <div id="trabalho" class="skill-progress">Evolução Profissional</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🧠 Mini Quiz</h2>
+            <div id="quiz-container">
+                <p style="font-weight: 600; margin-bottom: 1.2rem;">Qual é o meu maior plano e objetivo para o futuro?</p>
+                <div class="quiz-option" onclick="checkAnswer(this, false)">Me dedicar 100% ao vôlei profissional</div>
+                <div class="quiz-option" onclick="checkAnswer(this, true)">Me tornar um Chef Confeiteiro renomado</div>
+                <div class="quiz-option" onclick="checkAnswer(this, false)">Trabalhar exclusivamente com música</div>
+                <div class="quiz-option" onclick="checkAnswer(this, false)">Abrir uma consultoria de treino</div>
+            </div>
+            <div id="quiz-result"></div>
+        </div>
+
+    </div>
+
+    <footer>
+        Construído com código moderno para o meu perfil interativo.
+    </footer>
+
+    <script src="script.js"></script> </body>
+</html>
