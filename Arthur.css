@@ -1,0 +1,195 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --card-bg: #ffffff;
+    --text-main: #2d3748;
+    --text-muted: #718096;
+    --accent-primary: #6c5ce7;
+    --accent-secondary: #00cec9;
+    --success: #00b894;
+    --danger: #ff7675;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 3.5rem 1rem 2rem 1rem;
+    max-width: 800px;
+    width: 90%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    margin: 0.8rem 0 0 0;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.container {
+    max-width: 750px;
+    width: 90%;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-main);
+}
+
+p.intro-text {
+    line-height: 1.8;
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.info-box {
+    background: #f8fafc;
+    padding: 1.2rem;
+    border-radius: 16px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.info-box:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+/* Habilidades Interativas Modernas */
+.skill-container {
+    margin-top: 1.5rem;
+}
+
+.skill-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.skill-bar {
+    background-color: #edf2f7;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    height: 34px;
+    border: 1px solid #e2e8f0;
+}
+
+.skill-progress {
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    height: 100%;
+    width: 0;
+    transition: width 1.2s cubic-bezier(0.1, 1, 0.1, 1);
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* Quiz Modernizado */
+.quiz-option {
+    background-color: #f8fafc;
+    padding: 1rem 1.2rem;
+    margin: 0.8rem 0;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 0.95rem;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.quiz-option:hover {
+    background-color: #f1f5f9;
+    border-color: var(--accent-primary);
+    padding-left: 1.5rem;
+}
+
+.correct {
+    background-color: var(--success) !important;
+    color: white;
+    border-color: var(--success);
+    font-weight: 600;
+}
+
+.incorrect {
+    background-color: var(--danger) !important;
+    color: white;
+    border-color: var(--danger);
+    font-weight: 600;
+}
+
+#quiz-result {
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+footer {
+    margin-top: auto;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
